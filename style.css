@@ -1,0 +1,46 @@
+.container {
+	margin-bottom: 24px;
+}
+
+.table td,
+th {
+	width: 50%;
+	text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+	.logo {
+		width: 100px;
+		height: 100px;
+	}
+
+	.heading-1 {
+		font-size: 20px;
+		font-weight: 700;
+	}
+	.heading-2 {
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	.heading-3 {
+		font-size: 22px;
+		font-weight: 600;
+		text-align: center;
+	}
+
+	.heading-table {
+		font-size: 20px;
+	}
+
+}
+#btnStart{
+	width: 60px;
+	height: 40px;
+	margin-left: 70px;
+}
+#btnStop{
+	width: 60px;
+	height: 40px;
+	margin-left: 110px;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Blood Pressure</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <div class="container header" style="display: flex;">
+            <img class="logo" src="https://actvn.edu.vn/Images/actvn_big_icon.png">
+            <div>
+                <h1 class="heading-1" style="color: red;">Học Viện Kỹ thuật Mật Mã </h2>
+                <h2 class="heading-2" style="color: red;">Khoa: Điện Tử - Viễn Thông</h2>  
+            </div>
+        </div>
+        <!-- <br><br><br> -->
+        <div class="container">
+            <h2 class="heading-3" style="color: blue;">Đề tài: Ứng dụng cảm biến MEMS vào y tế và đời sống </h2>  
+        <!-- </div><br><br><br> -->
+        <div class="container">
+            <h2 class="heading-table">Bảng thông số bệnh nhân: </h2>            
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <th>SYS</th>
+                        <td id="SYS">0</td> 
+                    </tr>
+                    <tr>
+                        <th>DIA</th>
+                        <td id="DIA">0</td> 
+                    </tr>
+                    <tr>
+                        <th>PPM</th>
+                        <td id="PPM">0</td>
+                    </tr> 
+                </tbody>
+            </table>
+        </div> 
+
+
+        <div class="containerr"> 
+            <button type="button" class="btn btn-primary" id="btnStart">Start</button> 
+            <button type="button" class="btn btn-danger" id="btnStop">Stop</button> 
+        </div>
+
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.9/firebase-database.js"></script>
+        <script src="data.js"></script>
+
+    </body>
+</html>
