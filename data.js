@@ -88,3 +88,15 @@ btnStop.onclick = function()
     alert("Đã dừng đo");
 }
 
+database.ref("/wifistatus").on("value",function(snapshot)
+{
+    var wifi_status = snapshot.val();
+    document.getElementById("wifistatus").innerHTML = wifi_status;
+});
+
+database.ref("/status").on("value",function(snapshot)
+{
+    var status = snapshot.val();
+    document.getElementById("status").innerHTML = status;
+});
+
