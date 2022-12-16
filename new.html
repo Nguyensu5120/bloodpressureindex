@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Blood Pressure</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="./style.css">
+
+        <link rel="stylesheet" href="./style2.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <style>
+
+            .item {
+                display: flex;
+                align-items: center;
+
+                padding: 8px 12px;
+                margin: 8px 12px;
+                border: 1px solid gray;
+                border-radius: 4px;
+
+            }
+
+            .image{
+                width: 150px;
+                height: 75px;
+                /* object-fit: none; */
+                /* flex: 1; */
+            }
+
+            span {
+                padding-left: 6px;
+                font-size: 18px;
+                flex: 1;
+
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container header" style="display: flex;">
+            <img class="logo" src="https://actvn.edu.vn/Images/actvn_big_icon.png">
+            <div>
+                <h1 class="heading-1" style="color: red;">Học Viện Kỹ thuật Mật Mã </h2>
+                <h2 class="heading-2" style="color: red;">Khoa: Điện Tử - Viễn Thông</h2>  
+            </div>
+        </div>
+
+
+        <div class="topnav" id="myTopnav">
+            <a href="./new.html" class="active">News</a>
+            <a href="./index.html">Home</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+          </div>
+
+          <a href="./new-1.html" class="item">
+            <img class="image" src="https://pacificcross.com.vn/wp-content/uploads/2021/06/1-129-1024x683.jpg"/>
+            <span>Cao huyết áp nguy hiểm ra sao? Nguyên nhân và triệu chứng thường gặp</span>
+          </a>
+
+          <a href="./new-2.html" class="item">
+            <img class="image" src="https://omron-yte.com.vn/wp-content/uploads/2021/07/huong-dan-do-huyet-ap.jpg"/>
+            <span>Hướng dẫn cách đo huyết áp chuẩn xác nhất tại nhà</span>
+          </a>
+          
+          <a href="./new-3.html" class="item">
+            <img class="image" src="https://benhvienthanhvubaclieu.com/cms/static/site/sale_medicbaclieu/uploads/ckeditor/images.thumb.2ed8302d-236f-4b36-bfb5-ec93a67b1cbc.jpg"/>
+            <span>BÍ QUYẾT ĐỂ CƠ THỂ KHỎE MẠNH MỖI NGÀY?</span>
+          </a>
+        
+          <a href="./new-4.html" class="item">
+            <img class="image" src="https://dongshopsun.vn/wp-content/uploads/2020/10/4-3.jpg"/>
+            <span>Những cách giúp bạn cải thiện sức khỏe tốt nhất tại nhà</span>
+          </a>
+
+          <a href="./new-5.html" class="item">
+            <img class="image" src="https://fsivietnam.com.vn/wp-content/uploads/2022/03/10-xu-huong-1024x576.jpeg"/>
+            <span>10 xu hướng công nghệ đang từng bước thay đổi ngành y học</span>
+          </a>
+        
+        
+        <script src="data.js"></script>
+
+        <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+            </script>
+
+    </body>
+</html>

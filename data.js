@@ -22,81 +22,68 @@
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
 */
-  /*///////////////////////////////////////////////////////////////////////////*/
-
+/*///////////////////////////////////////////////////////////////////////////*/
 
 // TODO: Replace the following with your app's Firebase project configuration
 // See: https://firebase.google.com/docs/web/learn-more#config-object
 const firebaseConfig = {
-    apiKey: "AIzaSyC-CuzCY_raTal8YhWWmzhFqrsK4fZNVP8",
-    authDomain: "blood-pressure-26f6d.firebaseapp.com",
-    databaseURL: "https://blood-pressure-26f6d-default-rtdb.firebaseio.com",
-    projectId: "blood-pressure-26f6d",
-    storageBucket: "blood-pressure-26f6d.appspot.com",
-    messagingSenderId: "74300529167",
-    appId: "1:74300529167:web:40aaae7572083e5641e17a",
-    measurementId: "G-RF3MVJ6Y74"
-
-};
+	apiKey: 'AIzaSyC-CuzCY_raTal8YhWWmzhFqrsK4fZNVP8',
+	authDomain: 'blood-pressure-26f6d.firebaseapp.com',
+	databaseURL: 'https://blood-pressure-26f6d-default-rtdb.firebaseio.com',
+	projectId: 'blood-pressure-26f6d',
+	storageBucket: 'blood-pressure-26f6d.appspot.com',
+	messagingSenderId: '74300529167',
+	appId: '1:74300529167:web:40aaae7572083e5641e17a',
+	measurementId: 'G-RF3MVJ6Y74',
+}
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig)
 // Initialize Realtime Database and get a reference to the service
-const database = firebase.database();
+const database = firebase.database()
 
-var btnStart = document.getElementById("btnStart");
-var btnStop = document.getElementById("btnStop");
-
-
-
+var btnStart = document.getElementById('btnStart')
+var btnStop = document.getElementById('btnStop')
 
 /* GET SYS from FireBase */
-database.ref("/SYS").on("value",function(snapshot)
-{
-    var SYS = snapshot.val();
-    document.getElementById("SYS").innerHTML = SYS;
-});
+database.ref('/SYS').on('value', function (snapshot) {
+	var SYS = snapshot.val()
+	document.getElementById('SYS').innerHTML = SYS
+})
 
 /* GET DIA from FireBase */
-database.ref("/DIA").on("value",function(snapshot)
-{
-    var DIA = snapshot.val();
-    document.getElementById("DIA").innerHTML = DIA;
-});
+database.ref('/DIA').on('value', function (snapshot) {
+	var DIA = snapshot.val()
+	document.getElementById('DIA').innerHTML = DIA
+})
 
 /* GET PPM from FireBase */
-database.ref("/PPM").on("value",function(snapshot)
-{
-    var PPM = snapshot.val();
-    document.getElementById("PPM").innerHTML = PPM;
-});
+database.ref('/PPM').on('value', function (snapshot) {
+	var PPM = snapshot.val()
+	document.getElementById('PPM').innerHTML = PPM
+})
 
 /* Get Button */
-btnStart.onclick = function()
-{
-    firebase.database().ref("/BTN").update({
-        "Btn" : 1
-    });
-    alert("Bắt đầu đo");
+btnStart.onclick = function () {
+	firebase.database().ref('/BTN').update({
+		Btn: 1,
+	})
+	alert('Bắt đầu đo')
 }
 
-btnStop.onclick = function()
-{
-    firebase.database().ref("/BTN").update({
-        "Btn" : 0
-    });
-    alert("Đã dừng đo");
+btnStop.onclick = function () {
+	firebase.database().ref('/BTN').update({
+		Btn: 0,
+	})
+	alert('Đã dừng đo')
 }
 
-database.ref("/wifistatus").on("value",function(snapshot)
-{
-    var wifi_status = snapshot.val();
-    document.getElementById("wifistatus").innerHTML = wifi_status;
-});
+database.ref('/wifistatus').on('value', function (snapshot) {
+	var wifi_status = snapshot.val()
+	document.getElementById('wifistatus').innerHTML = wifi_status
+})
 
-database.ref("/status").on("value",function(snapshot)
-{
-    var status = snapshot.val();
-    document.getElementById("status").innerHTML = status;
-});
-
+database.ref('/status').on('value', function (snapshot) {
+	var status = snapshot.val()
+	document.getElementById('status').innerHTML = status
+})
